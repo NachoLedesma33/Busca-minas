@@ -27,15 +27,15 @@ Un juego de Buscaminas con estilo arcade, construido con React + Chakra UI v3.
 ## Instalación
 
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 ## Build
 
 ```bash
-pnpm build
-pnpm preview
+npm run build
+npm run preview
 ```
 
 ## Deploy
