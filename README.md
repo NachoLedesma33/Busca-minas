@@ -40,4 +40,7 @@ npm run preview
 
 ## Deploy
 
-El proyecto está configurado para deploy en GitHub Pages y Vercel.
+El proyecto está configurado para deploy automático en:
+
+- **Vercel** — conectá el repo de GitHub desde [vercel.com/new](https://vercel.com/new). Vite se detecta automáticamente.
+- **GitHub Pages** — el workflow en `.github/workflows/deploy.yml` despliega `dist/` automáticamente al pushear a `main`. Requiere ir a Settings > Pages y seleccionar "GitHub Actions" como source.
