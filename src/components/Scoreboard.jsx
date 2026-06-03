@@ -8,6 +8,7 @@ const difficulties = createListCollection({
     { label: 'Fácil (9x9)', value: 'easy' },
     { label: 'Medio (16x16)', value: 'medium' },
     { label: 'Difícil (30x16)', value: 'hard' },
+    { label: 'Personalizado', value: 'custom' },
   ],
 })
 

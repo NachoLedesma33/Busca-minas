@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { Flag, Bomb } from 'lucide-react'
+import { playReveal, playFlag } from '../utils/sound.js'
 
 const NUMBER_COLORS = {
   1: 'blue.400',
@@ -19,6 +20,7 @@ function Cell({ cell, gameOver, onReveal, onToggleFlag }) {
   const handleClick = () => {
     if (gameOver) return
     if (isFlagged) return
+    playReveal()
     onReveal(cell.row, cell.col)
   }
 
@@ -26,6 +28,7 @@ function Cell({ cell, gameOver, onReveal, onToggleFlag }) {
     e.preventDefault()
     if (gameOver) return
     if (isRevealed) return
+    playFlag()
     onToggleFlag(cell.row, cell.col)
   }
 

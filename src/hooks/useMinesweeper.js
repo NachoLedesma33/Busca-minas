@@ -170,6 +170,8 @@ function reducer(state, action) {
       const cell = state.board[row][col]
       if (cell.isRevealed) return state
 
+      if (!cell.isFlagged && state.minesLeft <= 0) return state
+
       const newBoard = state.board.map(r => r.map(c => ({ ...c })))
       newBoard[row][col].isFlagged = !newBoard[row][col].isFlagged
 
